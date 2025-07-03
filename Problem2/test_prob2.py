@@ -14,6 +14,12 @@ class TestRecursiveSumFunction(unittest.TestCase):
         
     def test_negative_number(self):
         self.assertEqual(recursive_sum(-50), 0)
+    
+    def test_two_digit_number(self):
+        self.assertEqual(recursive_sum(18), 9)
+
+    def test_large_number(self):
+        self.assertEqual(recursive_sum(987654321), 9)
 
 if __name__ == '__main__':
     unittest.main()
