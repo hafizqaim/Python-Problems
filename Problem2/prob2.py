@@ -7,5 +7,6 @@ def recursive_sum(n):
         sum = (n % 10) + recursive_sum(n // 10)
         return recursive_sum(sum)
 
-num = int(input("Enter a number to check digits sum: "))  
-print(recursive_sum(num))
+if __name__ == '__main__':
+    num = int(input("Enter a number to check digits sum: "))  
+    print(recursive_sum(num))
