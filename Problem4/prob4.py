@@ -1,4 +1,17 @@
 def missing_character(alphaList):
+    if not alphaList or len(alphaList) < 2:
+        return None
+    
+    if not all(isinstance(c, str) and len(c) == 1 for c in alphaList):
+        return None
+        
+    if not all(c.isalpha() for c in alphaList):
+        return None
+        
+    first_char_is_upper = alphaList[0].isupper()
+    if not all(c.isupper() == first_char_is_upper for c in alphaList):
+        return None
+    
     alphaList.sort()
     for i in range(len(alphaList) - 1):
         if ord(alphaList[i + 1]) - ord(alphaList[i]) != 1:
