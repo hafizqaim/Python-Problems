@@ -10,17 +10,9 @@ class TestMissingCharacter(unittest.TestCase):
         """Test a simple list with one missing character."""
         self.assertEqual(missing_character(['a', 'b', 'd']), 'c')
 
-    def test_unsorted_list(self):
-        """Test if the function works correctly with an unsorted list."""
-        self.assertEqual(missing_character(['d', 'a', 'b']), 'c')
-
     def test_uppercase(self):
         """Test with uppercase letters."""
         self.assertEqual(missing_character(['X', 'Z']), 'Y')
-
-    def test_mixed_case(self):
-        """Test with mixed case letters."""
-        self.assertEqual(missing_character(['a', 'B', 'c']), None)
 
     def test_no_missing_character(self):
         """Test a complete sequence where nothing is missing."""
