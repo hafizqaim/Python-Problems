@@ -1,6 +1,7 @@
 def missing_character(alphaList):
     if not alphaList or len(alphaList) < 2:
-        return None
+        raise ValueError("input list should contain 
+        at least 2 items")
     
     if not all(isinstance(c, str) and len(c) == 1 for c in alphaList):
         return None
