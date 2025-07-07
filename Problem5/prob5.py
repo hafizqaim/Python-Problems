@@ -5,19 +5,18 @@ def calculate_seconds(team_data):
     total_seconds = []
     time_strings = team_data.split(',')
 
-    for time_range in time_strings:
+for time_range in time_strings:
         try:
             hours, mins, secs = map(int, time_range.strip().split('|'))
-            try:
-                if hours < 0 or mins < 0 or secs < 0:
-                    print(f"Negative time values are not allowed: {time_range}")
-            except ValueError:
-                print(f"Invalid time format: {time_range}")
-                continue
+
+            if hours < 0 or mins < 0 or secs < 0:
+                raise ValueError("Negative time values are not allowed")
+                
             seconds = hours * 3600 + mins * 60 + secs
             total_seconds.append(seconds)
-        except ValueError:
-            print(f"Invalid time format: {time_range}")
+            
+        except ValueError as e:
+            print(f"Invalid time format in '{time_range.strip()}': {e}")
             continue
 
     return total_seconds
