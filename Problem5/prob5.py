@@ -5,7 +5,7 @@ def calculate_seconds(team_data):
     total_seconds = []
     time_strings = team_data.split(',')
 
-for time_range in time_strings:
+    for time_range in time_strings:
         try:
             hours, mins, secs = map(int, time_range.strip().split('|'))
 
