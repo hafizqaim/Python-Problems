@@ -14,7 +14,7 @@ class TestDiffOfLists(unittest.TestCase):
 
     def test_first_list_has_duplicates(self):
         """Test that duplicates in the first list are handled correctly."""
-        self.assertCountEqual(diff_of_lists([1, 1, 2, 3, 3], [1, 4]), [2, 3])
+        self.assertCountEqual(diff_of_lists([1, 1, 2, 3, 3], [1, 4]), [2, 3, 3])
  
     def test_negative_numbers(self):
         """Test behavior with negative numbers."""
