@@ -1,8 +1,7 @@
 # test_stats_calculator.py
 
 import unittest
-# Import all three functions to be tested
-from stats_calculator import calculate_seconds, seconds_to_time, stats
+from .prob5 import calculate_seconds, seconds_to_time, stats
 
 class TestTeamStats(unittest.TestCase):
     """
